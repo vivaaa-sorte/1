@@ -146,30 +146,30 @@
   
         <div class="cotas-one">
             
-            <button type="button" class="cota" onclick="selecionarValor(70)">
+            <button type="button" class="cota" onclick="selecionarValor(50)">
               <i class="bi bi-star-fill destaque"></i>
+              <div class="cota-qtd">
+              +50
+              </div>
+              <h1>R$48,50</h1>
+              <h2>SELECIONAR</h2>
+          </button>
+  
+          
+  
+          <button type="button" class="cota" onclick="selecionarValor(70)">
               <div class="cota-qtd">
               +70
               </div>
               <h1>R$69,30</h1>
               <h2>SELECIONAR</h2>
           </button>
-  
           
-  
           <button type="button" class="cota" onclick="selecionarValor(100)">
               <div class="cota-qtd">
               +100
               </div>
               <h1>R$99,00</h1>
-              <h2>SELECIONAR</h2>
-          </button>
-          
-          <button type="button" class="cota" onclick="selecionarValor(200)">
-              <div class="cota-qtd">
-              +200
-              </div>
-              <h1>R$199,00</h1>
               <h2>SELECIONAR</h2>
           </button>
   
@@ -278,7 +278,7 @@
       function incrementar() {
           var input = document.getElementById('numero');
           var valorAtual = parseInt(input.value);
-          if (valorAtual < 200) {
+          if (valorAtual < 100) {
               if (valorAtual === 0) {
                   input.value = 20;
               } else if (valorAtual === 20) {
@@ -286,11 +286,11 @@
               } else if (valorAtual === 30) {
                   input.value = 40;
               } else if (valorAtual === 40) {
+                  input.value = 50;
+              } else if (valorAtual === 50) {
                   input.value = 70;
               } else if (valorAtual === 70) {
                   input.value = 100;
-              } else if (valorAtual === 100) {
-                  input.value = 200;
               }
           }
           highlightButton();
@@ -300,11 +300,11 @@
           var input = document.getElementById('numero');
           var valorAtual = parseInt(input.value);
           if (valorAtual > 20) {
-              if (valorAtual === 200) {
-                  input.value = 100;
-              } else if (valorAtual === 100) {
+              if (valorAtual === 100) {
                   input.value = 70;
               } else if (valorAtual === 70) {
+                  input.value = 50;
+              } else if (valorAtual === 50) {
                   input.value = 40;
               } else if (valorAtual === 40) {
                   input.value = 30;
@@ -338,14 +338,14 @@
                       case 40:
                           link = "https://pay.opa-bele-za.space/checkout/2e97eca7-64c4-4e9f-be80-8481dc138afd";
                           break;
-                      case 70:
-                          link = "https://pay.opa-bele-za.space/checkout/726f7e94-4e23-42ce-8379-ee5daecb4d70";
+                      case 50:
+                          link = "https://pay.opa-bele-za.space/checkout/15a77530-e991-4545-8bf3-9788694cbedc";
                           break;
-                      case 100:
+                      case 70:
                           link = "https://pay.opa-bele-za.space/checkout/f54998a7-17d3-4678-b218-b72dbbe8d021";
                           break;
-                              case 200:
-                          link = "https://pay.opa-bele-za.space/checkout/15a77530-e991-4545-8bf3-9788694cbedc";
+                              case 100:
+                          link = "https://pay.opa-bele-za.space/checkout/f54998a7-17d3-4678-b218-b72dbbe8d021";
                           break;
                   
                       default:
