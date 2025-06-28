@@ -116,11 +116,11 @@
       <div class="cotas">
   
         <div class="cotas-one">
-                    <button type="button" class="cota" onclick="selecionarValor(20)">
+                    <button type="button" class="cota" onclick="selecionarValor(15)">
               <div class="cota-qtd">                    
-                  +20
+                  +15
               </div>
-              <h1>R$19,85</h1>
+              <h1>R$14,85</h1>
               <h2>SELECIONAR</h2>
           </button>
   
@@ -280,8 +280,8 @@
           var valorAtual = parseInt(input.value);
           if (valorAtual < 100) {
               if (valorAtual === 0) {
-                  input.value = 20;
-              } else if (valorAtual === 20) {
+                  input.value = 15;
+              } else if (valorAtual === 15) {
                   input.value = 30;
               } else if (valorAtual === 30) {
                   input.value = 40;
@@ -299,7 +299,7 @@
       function decrementar() {
           var input = document.getElementById('numero');
           var valorAtual = parseInt(input.value);
-          if (valorAtual > 20) {
+          if (valorAtual > 15) {
               if (valorAtual === 100) {
                   input.value = 70;
               } else if (valorAtual === 70) {
@@ -309,7 +309,7 @@
               } else if (valorAtual === 40) {
                   input.value = 30;
               } else if (valorAtual === 30) {
-                  input.value = 20;
+                  input.value = 15;
               }
           }
           highlightButton();
@@ -329,7 +329,7 @@
               if (valorBotao === valorAtual) {
                   botao.classList.add('cota-selected');
                   switch (valorBotao) {
-                       case 20:
+                       case 15:
                           link = "https://checkout.ninjapaybr.com/checkout/cmcb20jza09mryagl2tisnbgi";
                           break;
                       case 30:
